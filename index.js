@@ -54,19 +54,19 @@ const staff = [
     }
 ];
 
-const result3 = staff.map((persona) => {
+const resultado3 = staff.map((persona) => {
     return `${persona.name} es ${persona.role} y le gusta ${persona.hobbies[0]} y ${persona.hobbies[1]}`;
 });
 
-console.log(result3);
+console.log(resultado3);
 
 //4
 
 const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const result4 = numbers2.filter((n) => n % 2 !== 0);
+const resultadi4 = numbers2.filter((n) => n % 2 !== 0);
 
-console.log(result4);
+console.log(resultado4);
 
 //5
 
@@ -88,7 +88,7 @@ const foodList2 = [
         isVeggie: false
     }];
 
-const result5 = foodList2
+const resultado5 = foodList2
 
     .filter((plato) => plato.isVeggie)
     .map((plato) => {
@@ -99,7 +99,7 @@ const result5 = foodList2
         }
     });
 
-console.log(result5);
+console.log(resultado5);
 
 //6
 
@@ -123,17 +123,76 @@ const inventory = [
   }
 ];
 
-const result6 = inventory
+const resultado6 = inventory
     .filter((producto) => producto.price > 300)
     .map((producto) => producto.name);
 
 
-console.log(result6);
+console.log(resultado6);
 
 //7
 
 const numeros = [39, 2, 4, 25, 62];
 
-const result7 = numeros.reduce((acc, n) => acc * n, 1);
+const resultado7 = numeros.reduce((acc, n) => acc * n, 1);
 
-console.log(result7);
+console.log(resultado7);
+
+//8
+
+const sentenceElements = [
+  'Me',
+  'llamo',
+  'Laura',
+  'y',
+  'quiero',
+  'sentir',
+  'la',
+  'fuerza',
+  'con',
+  'javascript'
+];
+
+
+const resultado8 = sentenceElements.reduce((frase, palabra) => frase + ' ' + palabra);
+
+console.log(resultado8);
+
+//9
+
+const books = [
+  {
+    name: ' JS for dummies',
+    author: 'Emily A. Vander Veer',
+    price: 20,
+    category: 'code'
+  },
+  {
+    name: 'Don Quijote de la Mancha',
+    author: 'Cervantes',
+    price: 14,
+    category: 'novel'
+  },
+  {
+    name: 'Juego de tronos',
+    author: 'George R. Martin',
+    price: 32,
+    category: 'Fantasy'
+  },
+  {
+    name: 'javascript the good parts',
+    author: 'Douglas Crockford',
+    price: 40,
+    category: 'code'
+  }
+];
+
+const resultado9 = books.reduce((total, libro) => {
+    if (libro.category === 'code') {
+        return total + libro.price;
+    }
+    return total;
+}, 0);
+
+console.log(resultado9);
+
